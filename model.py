@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 # models - Backbone + Head
-# Backbone part - imagenet
+# Backbone part - imagenet (보통 backbone의 목적은 특성추출 -> classification을 맡은 파트를 사용 yolov1 당시 자체제작 Darknet사용)
 yolo_model = tf.keras.Sequential()
 
 max_num = len(tf.keras.applications.VGG16(weights='imagenet', include_top=False,  input_shape=(224, 224, 3)).layers)
